@@ -1,0 +1,1369 @@
+{
+	"info": {
+		"_postman_id": "27c8160b-b228-41ef-a40f-b6706e8fea02",
+		"name": "library management",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "36633118"
+	},
+	"item": [
+		{
+			"name": "Author API",
+			"item": [
+				{
+					"name": "create author",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"J.K. Rowling\",\n  \"bio\": \"British author, best known for the Harry Potter series.\",\n  \"dateOfBirth\": \"1965-07-31\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/authors",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"authors"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"aniket\",\n  \"bio\": \"never settle\",\n  \"dateOfBirth\": \"2001-04-14\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/authors",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"authors"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "131"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"83-7LEVx4D7fFi2AhFZgobJbbkR0oM\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 15 Dec 2024 15:18:10 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"name\": \"aniket\",\n    \"bio\": \"never settle\",\n    \"dateOfBirth\": \"2001-04-14T00:00:00.000Z\",\n    \"books\": [],\n    \"_id\": \"675ef331d2798f3f940b2637\",\n    \"__v\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "get all authors",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/authors",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"authors"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/api/authors",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"authors"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1842"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"732-bhGC1r2lMPeq8hC8plQgE4CVvHQ\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 15 Dec 2024 15:18:17 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"_id\": \"675e8c1590c4d78989488836\",\n        \"name\": \"J.K. Rowling\",\n        \"bio\": \"Updated biography of the author.\",\n        \"dateOfBirth\": \"1965-07-31T00:00:00.000Z\",\n        \"__v\": 3,\n        \"books\": [\n            {\n                \"_id\": \"675e90782a12e1ea9a8807f7\",\n                \"title\": \"Harry Potter and the Philosopher Stone\",\n                \"publishedDate\": \"1997-06-26T00:00:00.000Z\",\n                \"genre\": \"Fantasy\",\n                \"author\": \"675e8c1590c4d78989488836\",\n                \"__v\": 0\n            },\n            {\n                \"_id\": \"675ee77c812cbd84fb516259\",\n                \"title\": \"12 habits\",\n                \"publishedDate\": \"1997-06-26T00:00:00.000Z\",\n                \"genre\": \"Habit\",\n                \"author\": \"675e8c1590c4d78989488836\",\n                \"__v\": 0\n            },\n            {\n                \"_id\": \"675eec467d62545d75c9e062\",\n                \"title\": \"Genius 3\",\n                \"publishedDate\": \"2003-06-26T00:00:00.000Z\",\n                \"genre\": \"Talent\",\n                \"author\": \"675e8c1590c4d78989488836\",\n                \"__v\": 0\n            }\n        ]\n    },\n    {\n        \"_id\": \"675ea51ccce897e99b2c77bc\",\n        \"name\": \"Krunal Rana\",\n        \"bio\": \"its me\",\n        \"dateOfBirth\": \"2001-11-06T00:00:00.000Z\",\n        \"__v\": 2,\n        \"books\": [\n            {\n                \"_id\": \"675ea671cce897e99b2c77da\",\n                \"title\": \"7 habits\",\n                \"publishedDate\": \"1997-06-26T00:00:00.000Z\",\n                \"genre\": \"Habit\",\n                \"author\": \"675ea51ccce897e99b2c77bc\",\n                \"__v\": 0\n            },\n            {\n                \"_id\": \"675eec257d62545d75c9e05e\",\n                \"title\": \"Genius 2\",\n                \"publishedDate\": \"2005-06-26T00:00:00.000Z\",\n                \"genre\": \"Talent\",\n                \"author\": \"675ea51ccce897e99b2c77bc\",\n                \"__v\": 0\n            }\n        ]\n    },\n    {\n        \"_id\": \"675eebc67d62545d75c9e056\",\n        \"name\": \"Mohit\",\n        \"bio\": \"never settle\",\n        \"dateOfBirth\": \"2002-04-06T00:00:00.000Z\",\n        \"__v\": 3,\n        \"books\": [\n            {\n                \"_id\": \"675eebfe7d62545d75c9e05a\",\n                \"title\": \"Genius\",\n                \"publishedDate\": \"2001-06-26T00:00:00.000Z\",\n                \"genre\": \"Talent\",\n                \"author\": \"675eebc67d62545d75c9e056\",\n                \"__v\": 0\n            },\n            {\n                \"_id\": \"675eec7a7d62545d75c9e067\",\n                \"title\": \"Genius 4\",\n                \"publishedDate\": \"2010-06-26T00:00:00.000Z\",\n                \"genre\": \"Talent\",\n                \"author\": \"675eebc67d62545d75c9e056\",\n                \"__v\": 0\n            },\n            {\n                \"_id\": \"675ef267d66b945399f19e30\",\n                \"title\": \"Genius 5\",\n                \"publishedDate\": \"2020-06-26T00:00:00.000Z\",\n                \"genre\": \"Talent\",\n                \"author\": \"675eebc67d62545d75c9e056\",\n                \"__v\": 0\n            }\n        ]\n    },\n    {\n        \"_id\": \"675ef331d2798f3f940b2637\",\n        \"name\": \"aniket\",\n        \"bio\": \"never settle\",\n        \"dateOfBirth\": \"2001-04-14T00:00:00.000Z\",\n        \"__v\": 0,\n        \"books\": []\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "author by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/authors/675e8c1590c4d78989488836",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"authors",
+								"675e8c1590c4d78989488836"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/api/authors/675e8c1590c4d78989488836",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"authors",
+										"675e8c1590c4d78989488836"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "503"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1f7-nFsqnC41H2iZ7NA8VdJDU2uKNVg\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 15 Dec 2024 14:36:07 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"675e8c1590c4d78989488836\",\n    \"name\": \"J.K. Rowling\",\n    \"bio\": \"Updated biography of the author.\",\n    \"dateOfBirth\": \"1965-07-31T00:00:00.000Z\",\n    \"__v\": 2,\n    \"books\": [\n        {\n            \"_id\": \"675e90782a12e1ea9a8807f7\",\n            \"title\": \"Harry Potter and the Philosopher Stone\",\n            \"publishedDate\": \"1997-06-26T00:00:00.000Z\",\n            \"genre\": \"Fantasy\",\n            \"author\": \"675e8c1590c4d78989488836\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"675ee77c812cbd84fb516259\",\n            \"title\": \"12 habits\",\n            \"publishedDate\": \"1997-06-26T00:00:00.000Z\",\n            \"genre\": \"Habit\",\n            \"author\": \"675e8c1590c4d78989488836\",\n            \"__v\": 0\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "update author",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"bio\": \"Updated biography of the author.\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/authors/675e8c1590c4d78989488836",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"authors",
+								"675e8c1590c4d78989488836"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "update author",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"bio\": \"Updated biography of the author.\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/authors/675e8c1590c4d78989488836",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"authors",
+										"675e8c1590c4d78989488836"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "183"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"b7-bvQ650m8envvKHb6BREHFA22mnQ\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 15 Dec 2024 09:08:52 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"675e8c1590c4d78989488836\",\n    \"name\": \"J.K. Rowling\",\n    \"bio\": \"Updated biography of the author.\",\n    \"dateOfBirth\": \"1965-07-31T00:00:00.000Z\",\n    \"books\": [\n        \"675e90782a12e1ea9a8807f7\"\n    ],\n    \"__v\": 1\n}"
+						}
+					]
+				},
+				{
+					"name": "delete author",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/authors/675e9d18f8c71353971e503a",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"authors",
+								"675e9d18f8c71353971e503a"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/api/authors/675ef295d66b945399f19e34",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"authors",
+										"675ef295d66b945399f19e34"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "41"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"29-y5E/g1GAJiT/kj57/wpYgn2BeFk\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 15 Dec 2024 15:17:06 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Author deleted successfully\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Book API",
+			"item": [
+				{
+					"name": "create book",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"title\": \"Harry Potter and the Philosopher Stone\",\n  \"publishedDate\": \"1997-06-26\",\n  \"genre\": \"Fantasy\",\n  \"author\": \"64fa12f4b7d3124f880b1c7b\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/books",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"books"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"title\": \"Genius 5\",\n  \"publishedDate\": \"2020-06-26\",\n  \"genre\": \"Talent\",\n  \"author\": \"675eebc67d62545d75c9e056\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/books",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"books"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "157"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"9d-ToXCPSpQ1oV90CRt4NmNBklj510\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 15 Dec 2024 15:14:47 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"title\": \"Genius 5\",\n    \"publishedDate\": \"2020-06-26T00:00:00.000Z\",\n    \"genre\": \"Talent\",\n    \"author\": \"675eebc67d62545d75c9e056\",\n    \"_id\": \"675ef267d66b945399f19e30\",\n    \"__v\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "get all books",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/books",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"books"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get all books",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/api/books",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"books"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "2697"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"a89-+ZWXHvMuT3s4QFttgLGMJO2MMLI\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 15 Dec 2024 14:51:21 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"_id\": \"675e90782a12e1ea9a8807f7\",\n        \"title\": \"Harry Potter and the Philosopher Stone\",\n        \"publishedDate\": \"1997-06-26T00:00:00.000Z\",\n        \"genre\": \"Fantasy\",\n        \"author\": \"675e8c1590c4d78989488836\",\n        \"__v\": 0,\n        \"authorDetails\": {\n            \"_id\": \"675e8c1590c4d78989488836\",\n            \"name\": \"J.K. Rowling\",\n            \"bio\": \"Updated biography of the author.\",\n            \"dateOfBirth\": \"1965-07-31T00:00:00.000Z\",\n            \"books\": [\n                \"675e90782a12e1ea9a8807f7\",\n                \"675ee77c812cbd84fb516259\",\n                \"675eec467d62545d75c9e062\"\n            ],\n            \"__v\": 3\n        }\n    },\n    {\n        \"_id\": \"675ea671cce897e99b2c77da\",\n        \"title\": \"7 habits\",\n        \"publishedDate\": \"1997-06-26T00:00:00.000Z\",\n        \"genre\": \"Habit\",\n        \"author\": \"675ea51ccce897e99b2c77bc\",\n        \"__v\": 0,\n        \"authorDetails\": {\n            \"_id\": \"675ea51ccce897e99b2c77bc\",\n            \"name\": \"Krunal Rana\",\n            \"bio\": \"its me\",\n            \"dateOfBirth\": \"2001-11-06T00:00:00.000Z\",\n            \"books\": [\n                \"675ea671cce897e99b2c77da\",\n                \"675eec257d62545d75c9e05e\"\n            ],\n            \"__v\": 2\n        }\n    },\n    {\n        \"_id\": \"675ee77c812cbd84fb516259\",\n        \"title\": \"12 habits\",\n        \"publishedDate\": \"1997-06-26T00:00:00.000Z\",\n        \"genre\": \"Habit\",\n        \"author\": \"675e8c1590c4d78989488836\",\n        \"__v\": 0,\n        \"authorDetails\": {\n            \"_id\": \"675e8c1590c4d78989488836\",\n            \"name\": \"J.K. Rowling\",\n            \"bio\": \"Updated biography of the author.\",\n            \"dateOfBirth\": \"1965-07-31T00:00:00.000Z\",\n            \"books\": [\n                \"675e90782a12e1ea9a8807f7\",\n                \"675ee77c812cbd84fb516259\",\n                \"675eec467d62545d75c9e062\"\n            ],\n            \"__v\": 3\n        }\n    },\n    {\n        \"_id\": \"675eebfe7d62545d75c9e05a\",\n        \"title\": \"Genius\",\n        \"publishedDate\": \"2001-06-26T00:00:00.000Z\",\n        \"genre\": \"Talent\",\n        \"author\": \"675eebc67d62545d75c9e056\",\n        \"__v\": 0,\n        \"authorDetails\": {\n            \"_id\": \"675eebc67d62545d75c9e056\",\n            \"name\": \"Mohit\",\n            \"bio\": \"never settle\",\n            \"dateOfBirth\": \"2002-04-06T00:00:00.000Z\",\n            \"books\": [\n                \"675eebfe7d62545d75c9e05a\",\n                \"675eec7a7d62545d75c9e067\"\n            ],\n            \"__v\": 2\n        }\n    },\n    {\n        \"_id\": \"675eec467d62545d75c9e062\",\n        \"title\": \"Genius 3\",\n        \"publishedDate\": \"2003-06-26T00:00:00.000Z\",\n        \"genre\": \"Talent\",\n        \"author\": \"675e8c1590c4d78989488836\",\n        \"__v\": 0,\n        \"authorDetails\": {\n            \"_id\": \"675e8c1590c4d78989488836\",\n            \"name\": \"J.K. Rowling\",\n            \"bio\": \"Updated biography of the author.\",\n            \"dateOfBirth\": \"1965-07-31T00:00:00.000Z\",\n            \"books\": [\n                \"675e90782a12e1ea9a8807f7\",\n                \"675ee77c812cbd84fb516259\",\n                \"675eec467d62545d75c9e062\"\n            ],\n            \"__v\": 3\n        }\n    },\n    {\n        \"_id\": \"675eec257d62545d75c9e05e\",\n        \"title\": \"Genius 2\",\n        \"publishedDate\": \"2005-06-26T00:00:00.000Z\",\n        \"genre\": \"Talent\",\n        \"author\": \"675ea51ccce897e99b2c77bc\",\n        \"__v\": 0,\n        \"authorDetails\": {\n            \"_id\": \"675ea51ccce897e99b2c77bc\",\n            \"name\": \"Krunal Rana\",\n            \"bio\": \"its me\",\n            \"dateOfBirth\": \"2001-11-06T00:00:00.000Z\",\n            \"books\": [\n                \"675ea671cce897e99b2c77da\",\n                \"675eec257d62545d75c9e05e\"\n            ],\n            \"__v\": 2\n        }\n    },\n    {\n        \"_id\": \"675eec7a7d62545d75c9e067\",\n        \"title\": \"Genius 4\",\n        \"publishedDate\": \"2010-06-26T00:00:00.000Z\",\n        \"genre\": \"Talent\",\n        \"author\": \"675eebc67d62545d75c9e056\",\n        \"__v\": 0,\n        \"authorDetails\": {\n            \"_id\": \"675eebc67d62545d75c9e056\",\n            \"name\": \"Mohit\",\n            \"bio\": \"never settle\",\n            \"dateOfBirth\": \"2002-04-06T00:00:00.000Z\",\n            \"books\": [\n                \"675eebfe7d62545d75c9e05a\",\n                \"675eec7a7d62545d75c9e067\"\n            ],\n            \"__v\": 2\n        }\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "search book by name",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/books?search=Harry Potter and the Philosopher Stone",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"books"
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": "Harry Potter and the Philosopher Stone"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get all books Copy",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/api/books?search=Harry Potter and the Philosopher Stone",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"books"
+									],
+									"query": [
+										{
+											"key": "search",
+											"value": "Harry Potter and the Philosopher Stone"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "444"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1bc-Og43jeDFxvyg/bPj8JF8jqjKBos\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 15 Dec 2024 14:54:46 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"_id\": \"675e90782a12e1ea9a8807f7\",\n        \"title\": \"Harry Potter and the Philosopher Stone\",\n        \"publishedDate\": \"1997-06-26T00:00:00.000Z\",\n        \"genre\": \"Fantasy\",\n        \"author\": \"675e8c1590c4d78989488836\",\n        \"__v\": 0,\n        \"authorDetails\": {\n            \"_id\": \"675e8c1590c4d78989488836\",\n            \"name\": \"J.K. Rowling\",\n            \"bio\": \"Updated biography of the author.\",\n            \"dateOfBirth\": \"1965-07-31T00:00:00.000Z\",\n            \"books\": [\n                \"675e90782a12e1ea9a8807f7\",\n                \"675ee77c812cbd84fb516259\",\n                \"675eec467d62545d75c9e062\"\n            ],\n            \"__v\": 3\n        }\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "search book by Authorname",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/books?authorName=mohit",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"books"
+							],
+							"query": [
+								{
+									"key": "authorName",
+									"value": "mohit"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "search book by name Copy",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/api/books?authorName=mohit",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"books"
+									],
+									"query": [
+										{
+											"key": "authorName",
+											"value": "mohit"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "715"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2cb-wN5oncKS0AzKRiDvKDFLnfY/K7w\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 15 Dec 2024 14:56:02 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"_id\": \"675eebfe7d62545d75c9e05a\",\n        \"title\": \"Genius\",\n        \"publishedDate\": \"2001-06-26T00:00:00.000Z\",\n        \"genre\": \"Talent\",\n        \"author\": \"675eebc67d62545d75c9e056\",\n        \"__v\": 0,\n        \"authorDetails\": {\n            \"_id\": \"675eebc67d62545d75c9e056\",\n            \"name\": \"Mohit\",\n            \"bio\": \"never settle\",\n            \"dateOfBirth\": \"2002-04-06T00:00:00.000Z\",\n            \"books\": [\n                \"675eebfe7d62545d75c9e05a\",\n                \"675eec7a7d62545d75c9e067\"\n            ],\n            \"__v\": 2\n        }\n    },\n    {\n        \"_id\": \"675eec7a7d62545d75c9e067\",\n        \"title\": \"Genius 4\",\n        \"publishedDate\": \"2010-06-26T00:00:00.000Z\",\n        \"genre\": \"Talent\",\n        \"author\": \"675eebc67d62545d75c9e056\",\n        \"__v\": 0,\n        \"authorDetails\": {\n            \"_id\": \"675eebc67d62545d75c9e056\",\n            \"name\": \"Mohit\",\n            \"bio\": \"never settle\",\n            \"dateOfBirth\": \"2002-04-06T00:00:00.000Z\",\n            \"books\": [\n                \"675eebfe7d62545d75c9e05a\",\n                \"675eec7a7d62545d75c9e067\"\n            ],\n            \"__v\": 2\n        }\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "pagination",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/books?page=1&limit=4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"books"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "4"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "search book by Authorname Copy",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/api/books?page=1&limit=4",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"books"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "limit",
+											"value": "4"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1569"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"621-dkfzzpcuZBpjCKYVnuW7CJa3ZM4\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 15 Dec 2024 14:59:58 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"_id\": \"675e90782a12e1ea9a8807f7\",\n        \"title\": \"Harry Potter and the Philosopher Stone\",\n        \"publishedDate\": \"1997-06-26T00:00:00.000Z\",\n        \"genre\": \"Fantasy\",\n        \"author\": \"675e8c1590c4d78989488836\",\n        \"__v\": 0,\n        \"authorDetails\": {\n            \"_id\": \"675e8c1590c4d78989488836\",\n            \"name\": \"J.K. Rowling\",\n            \"bio\": \"Updated biography of the author.\",\n            \"dateOfBirth\": \"1965-07-31T00:00:00.000Z\",\n            \"books\": [\n                \"675e90782a12e1ea9a8807f7\",\n                \"675ee77c812cbd84fb516259\",\n                \"675eec467d62545d75c9e062\"\n            ],\n            \"__v\": 3\n        }\n    },\n    {\n        \"_id\": \"675ea671cce897e99b2c77da\",\n        \"title\": \"7 habits\",\n        \"publishedDate\": \"1997-06-26T00:00:00.000Z\",\n        \"genre\": \"Habit\",\n        \"author\": \"675ea51ccce897e99b2c77bc\",\n        \"__v\": 0,\n        \"authorDetails\": {\n            \"_id\": \"675ea51ccce897e99b2c77bc\",\n            \"name\": \"Krunal Rana\",\n            \"bio\": \"its me\",\n            \"dateOfBirth\": \"2001-11-06T00:00:00.000Z\",\n            \"books\": [\n                \"675ea671cce897e99b2c77da\",\n                \"675eec257d62545d75c9e05e\"\n            ],\n            \"__v\": 2\n        }\n    },\n    {\n        \"_id\": \"675ee77c812cbd84fb516259\",\n        \"title\": \"12 habits\",\n        \"publishedDate\": \"1997-06-26T00:00:00.000Z\",\n        \"genre\": \"Habit\",\n        \"author\": \"675e8c1590c4d78989488836\",\n        \"__v\": 0,\n        \"authorDetails\": {\n            \"_id\": \"675e8c1590c4d78989488836\",\n            \"name\": \"J.K. Rowling\",\n            \"bio\": \"Updated biography of the author.\",\n            \"dateOfBirth\": \"1965-07-31T00:00:00.000Z\",\n            \"books\": [\n                \"675e90782a12e1ea9a8807f7\",\n                \"675ee77c812cbd84fb516259\",\n                \"675eec467d62545d75c9e062\"\n            ],\n            \"__v\": 3\n        }\n    },\n    {\n        \"_id\": \"675eebfe7d62545d75c9e05a\",\n        \"title\": \"Genius\",\n        \"publishedDate\": \"2001-06-26T00:00:00.000Z\",\n        \"genre\": \"Talent\",\n        \"author\": \"675eebc67d62545d75c9e056\",\n        \"__v\": 0,\n        \"authorDetails\": {\n            \"_id\": \"675eebc67d62545d75c9e056\",\n            \"name\": \"Mohit\",\n            \"bio\": \"never settle\",\n            \"dateOfBirth\": \"2002-04-06T00:00:00.000Z\",\n            \"books\": [\n                \"675eebfe7d62545d75c9e05a\",\n                \"675eec7a7d62545d75c9e067\"\n            ],\n            \"__v\": 2\n        }\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "sort by publisheddate desc",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/books?sort=desc",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"books"
+							],
+							"query": [
+								{
+									"key": "sort",
+									"value": "desc"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "pagination Copy",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/api/books?sort=desc",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"books"
+									],
+									"query": [
+										{
+											"key": "sort",
+											"value": "desc"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "2697"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"a89-GMjg/oJPOaMmgTxn4PHUj1re12g\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 15 Dec 2024 15:02:18 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"_id\": \"675eec7a7d62545d75c9e067\",\n        \"title\": \"Genius 4\",\n        \"publishedDate\": \"2010-06-26T00:00:00.000Z\",\n        \"genre\": \"Talent\",\n        \"author\": \"675eebc67d62545d75c9e056\",\n        \"__v\": 0,\n        \"authorDetails\": {\n            \"_id\": \"675eebc67d62545d75c9e056\",\n            \"name\": \"Mohit\",\n            \"bio\": \"never settle\",\n            \"dateOfBirth\": \"2002-04-06T00:00:00.000Z\",\n            \"books\": [\n                \"675eebfe7d62545d75c9e05a\",\n                \"675eec7a7d62545d75c9e067\"\n            ],\n            \"__v\": 2\n        }\n    },\n    {\n        \"_id\": \"675eec257d62545d75c9e05e\",\n        \"title\": \"Genius 2\",\n        \"publishedDate\": \"2005-06-26T00:00:00.000Z\",\n        \"genre\": \"Talent\",\n        \"author\": \"675ea51ccce897e99b2c77bc\",\n        \"__v\": 0,\n        \"authorDetails\": {\n            \"_id\": \"675ea51ccce897e99b2c77bc\",\n            \"name\": \"Krunal Rana\",\n            \"bio\": \"its me\",\n            \"dateOfBirth\": \"2001-11-06T00:00:00.000Z\",\n            \"books\": [\n                \"675ea671cce897e99b2c77da\",\n                \"675eec257d62545d75c9e05e\"\n            ],\n            \"__v\": 2\n        }\n    },\n    {\n        \"_id\": \"675eec467d62545d75c9e062\",\n        \"title\": \"Genius 3\",\n        \"publishedDate\": \"2003-06-26T00:00:00.000Z\",\n        \"genre\": \"Talent\",\n        \"author\": \"675e8c1590c4d78989488836\",\n        \"__v\": 0,\n        \"authorDetails\": {\n            \"_id\": \"675e8c1590c4d78989488836\",\n            \"name\": \"J.K. Rowling\",\n            \"bio\": \"Updated biography of the author.\",\n            \"dateOfBirth\": \"1965-07-31T00:00:00.000Z\",\n            \"books\": [\n                \"675e90782a12e1ea9a8807f7\",\n                \"675ee77c812cbd84fb516259\",\n                \"675eec467d62545d75c9e062\"\n            ],\n            \"__v\": 3\n        }\n    },\n    {\n        \"_id\": \"675eebfe7d62545d75c9e05a\",\n        \"title\": \"Genius\",\n        \"publishedDate\": \"2001-06-26T00:00:00.000Z\",\n        \"genre\": \"Talent\",\n        \"author\": \"675eebc67d62545d75c9e056\",\n        \"__v\": 0,\n        \"authorDetails\": {\n            \"_id\": \"675eebc67d62545d75c9e056\",\n            \"name\": \"Mohit\",\n            \"bio\": \"never settle\",\n            \"dateOfBirth\": \"2002-04-06T00:00:00.000Z\",\n            \"books\": [\n                \"675eebfe7d62545d75c9e05a\",\n                \"675eec7a7d62545d75c9e067\"\n            ],\n            \"__v\": 2\n        }\n    },\n    {\n        \"_id\": \"675e90782a12e1ea9a8807f7\",\n        \"title\": \"Harry Potter and the Philosopher Stone\",\n        \"publishedDate\": \"1997-06-26T00:00:00.000Z\",\n        \"genre\": \"Fantasy\",\n        \"author\": \"675e8c1590c4d78989488836\",\n        \"__v\": 0,\n        \"authorDetails\": {\n            \"_id\": \"675e8c1590c4d78989488836\",\n            \"name\": \"J.K. Rowling\",\n            \"bio\": \"Updated biography of the author.\",\n            \"dateOfBirth\": \"1965-07-31T00:00:00.000Z\",\n            \"books\": [\n                \"675e90782a12e1ea9a8807f7\",\n                \"675ee77c812cbd84fb516259\",\n                \"675eec467d62545d75c9e062\"\n            ],\n            \"__v\": 3\n        }\n    },\n    {\n        \"_id\": \"675ea671cce897e99b2c77da\",\n        \"title\": \"7 habits\",\n        \"publishedDate\": \"1997-06-26T00:00:00.000Z\",\n        \"genre\": \"Habit\",\n        \"author\": \"675ea51ccce897e99b2c77bc\",\n        \"__v\": 0,\n        \"authorDetails\": {\n            \"_id\": \"675ea51ccce897e99b2c77bc\",\n            \"name\": \"Krunal Rana\",\n            \"bio\": \"its me\",\n            \"dateOfBirth\": \"2001-11-06T00:00:00.000Z\",\n            \"books\": [\n                \"675ea671cce897e99b2c77da\",\n                \"675eec257d62545d75c9e05e\"\n            ],\n            \"__v\": 2\n        }\n    },\n    {\n        \"_id\": \"675ee77c812cbd84fb516259\",\n        \"title\": \"12 habits\",\n        \"publishedDate\": \"1997-06-26T00:00:00.000Z\",\n        \"genre\": \"Habit\",\n        \"author\": \"675e8c1590c4d78989488836\",\n        \"__v\": 0,\n        \"authorDetails\": {\n            \"_id\": \"675e8c1590c4d78989488836\",\n            \"name\": \"J.K. Rowling\",\n            \"bio\": \"Updated biography of the author.\",\n            \"dateOfBirth\": \"1965-07-31T00:00:00.000Z\",\n            \"books\": [\n                \"675e90782a12e1ea9a8807f7\",\n                \"675ee77c812cbd84fb516259\",\n                \"675eec467d62545d75c9e062\"\n            ],\n            \"__v\": 3\n        }\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "combined",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/books?search=genius&authorName=mohit&page=1&limit=2&sort=asc",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"books"
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": "genius"
+								},
+								{
+									"key": "authorName",
+									"value": "mohit"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "2"
+								},
+								{
+									"key": "sort",
+									"value": "asc"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "sort by publisheddate desc Copy",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/api/books?search=genius&authorName=mohit&page=1&limit=2&sort=asc",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"books"
+									],
+									"query": [
+										{
+											"key": "search",
+											"value": "genius"
+										},
+										{
+											"key": "authorName",
+											"value": "mohit"
+										},
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "limit",
+											"value": "2"
+										},
+										{
+											"key": "sort",
+											"value": "asc"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "715"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2cb-wN5oncKS0AzKRiDvKDFLnfY/K7w\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 15 Dec 2024 15:04:41 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"_id\": \"675eebfe7d62545d75c9e05a\",\n        \"title\": \"Genius\",\n        \"publishedDate\": \"2001-06-26T00:00:00.000Z\",\n        \"genre\": \"Talent\",\n        \"author\": \"675eebc67d62545d75c9e056\",\n        \"__v\": 0,\n        \"authorDetails\": {\n            \"_id\": \"675eebc67d62545d75c9e056\",\n            \"name\": \"Mohit\",\n            \"bio\": \"never settle\",\n            \"dateOfBirth\": \"2002-04-06T00:00:00.000Z\",\n            \"books\": [\n                \"675eebfe7d62545d75c9e05a\",\n                \"675eec7a7d62545d75c9e067\"\n            ],\n            \"__v\": 2\n        }\n    },\n    {\n        \"_id\": \"675eec7a7d62545d75c9e067\",\n        \"title\": \"Genius 4\",\n        \"publishedDate\": \"2010-06-26T00:00:00.000Z\",\n        \"genre\": \"Talent\",\n        \"author\": \"675eebc67d62545d75c9e056\",\n        \"__v\": 0,\n        \"authorDetails\": {\n            \"_id\": \"675eebc67d62545d75c9e056\",\n            \"name\": \"Mohit\",\n            \"bio\": \"never settle\",\n            \"dateOfBirth\": \"2002-04-06T00:00:00.000Z\",\n            \"books\": [\n                \"675eebfe7d62545d75c9e05a\",\n                \"675eec7a7d62545d75c9e067\"\n            ],\n            \"__v\": 2\n        }\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "book by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/books/675e9d5df8c71353971e503f",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"books",
+								"675e9d5df8c71353971e503f"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get all books Copy",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/api/books/675e9d5df8c71353971e503f",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"books",
+										"675e9d5df8c71353971e503f"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "120"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"78-o7ALnQg2LMsScFDRgUU5qCqxrIU\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 15 Dec 2024 09:42:12 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"675e9d5df8c71353971e503f\",\n    \"title\": \"7 habits\",\n    \"publishedDate\": \"1997-06-26T00:00:00.000Z\",\n    \"genre\": \"Habit\",\n    \"__v\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "update book",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"author\": \"675ea51ccce897e99b2c77bc\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/books/675e9d5df8c71353971e503f",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"books",
+								"675e9d5df8c71353971e503f"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "update book",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"author\": \"675ea51ccce897e99b2c77bc\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/books/675e9d5df8c71353971e503f",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"books",
+										"675e9d5df8c71353971e503f"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "164"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"a4-MmT7FMQQ5Ai2LHOOKSy6fFtHtQ0\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 15 Dec 2024 09:46:12 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"675e9d5df8c71353971e503f\",\n    \"title\": \"7 habits\",\n    \"publishedDate\": \"1997-06-26T00:00:00.000Z\",\n    \"genre\": \"Updated Genre\",\n    \"__v\": 0,\n    \"author\": \"675ea51ccce897e99b2c77bc\"\n}"
+						}
+					]
+				},
+				{
+					"name": "delete book",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/books/675e9d5df8c71353971e503f",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"books",
+								"675e9d5df8c71353971e503f"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "update book Copy",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/api/books/675e9d5df8c71353971e503f",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"books",
+										"675e9d5df8c71353971e503f"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "39"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"27-2sU+wH8LsO2HgYqDa0daGODIV30\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 15 Dec 2024 09:49:29 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Book deleted successfully\"\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
